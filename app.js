@@ -48,3 +48,40 @@ fetch('https://email-data-70504-default-rtdb.firebaseio.com/',{
     }
 
 
+
+    let nextBtn=document.querySelector("#next");
+    let prevBtn=document.querySelector("#prev");
+    let imgCardes=document.querySelectorAll(".m-card");
+    let cardWrapper=document.querySelector(".m-card-wrapper");
+    let imgArray=[...imgCardes];
+
+    nextBtn.addEventListener("click",nextSlider);
+
+    function nextSlider(){
+       let firstImg=imgArray[0];
+       console.log("object")
+       for(let i=1;i<imgArray.length;i++){
+        imgArray[i-1]=imgArray[i];
+       }
+       imgArray[imgArray.length-1]=firstImg;
+
+       for(let i=0;i<imgArray.length;i++){
+        cardWrapper.appendChild(imgArray[i]);
+       }
+    }
+    prevBtn.addEventListener("click",prevSlider);
+
+    function prevSlider(){
+       let lastImg=imgArray[imgArray.length-1];
+       console.log("object")
+       for(let i=imgArray.length-1;i>0;i--){
+        imgArray[i]=imgArray[i-1];
+       }
+       imgArray[0]=lastImg;
+
+       for(let i=0;i<imgArray.length;i++){
+        cardWrapper.appendChild(imgArray[i]);
+       }
+    }
+
+    let imageIntervalId=setInterval(nextSlider,3000)
