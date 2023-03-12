@@ -293,18 +293,6 @@ nav .container ul li:hover {
 #project h2 > span {
   border-bottom: 4px solid rgba(255, 255, 0, 0.69);
 }
-.project-container {
-
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* grid-template-rows: repeat(2 ,250px ); */
-  gap:1rem;
-  padding-bottom: 6rem;
-
-}
 .major-project{
   position: relative;
   width: 100%;
@@ -320,7 +308,7 @@ nav .container ul li:hover {
   justify-content: space-between;
   gap:5%;
   overflow-x: hidden;
-
+  
 }
 .m-card{
   min-width: 30%;
@@ -331,12 +319,12 @@ nav .container ul li:hover {
   background-color: aliceblue;
 }
 .m-card a h3{
-   color: black;
-   height: 25%;
-   display: grid;
-   place-items: center;
-   font-size: 2.5rem;
-   color:#003251;
+  color: black;
+  height: 25%;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  color:#003251;
 }
 .m-card img{
   width:100%;
@@ -349,28 +337,52 @@ nav .container ul li:hover {
   left: 6%;
   top: 50%;
   padding: 5px 10px;
-  background-color: #25e07c;
+  background-color: white;
   border: none;
+  border-radius: 50%;
   font-weight: bold;
   font-size:1.5rem;
   cursor: pointer;
+  width: 5rem;
+  height: 5rem;
 }
 .major-project #next{
   position: absolute;
   right: 6%;
   top: 50%;
   padding: 5px 10px;
-  background-color:rgb(199, 184, 184);
+  border-radius: 50%;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-color:white;
   border: none;
   font-weight: bold;
   color: rgb(59, 32, 32);
-  background-color: #25e07c;
+  
   font-size:1.5rem;
   cursor: pointer;
 }
+.mini-project h2{
+  margin-top: 6rem;
+  color:#fff700 !important;
+  font-size: 1rem !important;
+}
+.project-container {
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap:2rem;
+  padding-bottom: 6rem;
+
+}
 /* .grid-item{
-    display: grid;
-    place-items:center;
+  display: grid;
+  place-items:center;
 } */
 .card {
   width:100%;
@@ -519,7 +531,7 @@ textarea {
   font-size: 3rem;
 }
 .contact-way h3 {
-  font-size: 3rem;
+font-size: 2rem;
   font-weight: bold;
 }
 .bottom-contact {
